@@ -1,0 +1,83 @@
+* {
+    text-align: center;
+    font-family: sans-serif
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+
+html {
+    background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+    background-size:cover;
+    font-family:'helvetica neue';
+    text-align: center;
+    font-size: 16px;
+  }
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border:20px solid white;
+    border-radius:50%;
+    margin:50px auto;
+    position: relative;
+    padding:2rem;
+    box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px #EFEFEF,
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+}
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+ }
+
+  .pointer {
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+}
+
+.big {
+    background: #737373;
+}
+
+.medium {
+    background: #999999;
+}
+
+.small {
+    background: #bfbfbf;
+}
+
+.but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+button {
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    display: inline-block;
+    background-color: white;
+    font-size: 16px;
+    padding: 15px 32px;
+    position: absolute;
+    top: 120%;
+}
