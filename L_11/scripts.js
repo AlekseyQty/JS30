@@ -21,7 +21,7 @@ function updateButton() {
 }
 
 function skip() {
-    skipVal = this.dataset.skip;
+    var skipVal = this.dataset.skip;
     video.currentTime += parseFloat(skipVal);
 }
 
