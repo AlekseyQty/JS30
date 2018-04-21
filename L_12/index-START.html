@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+
+<body>
+  <script>
+    var final = 'asd'.split('');
+    var temp = [];
+    var i = 0;
+    function checkCode(e) {
+      if (e.key == final[i]) {
+        temp.push(e.key);
+        if (final.length == temp.length) {
+          console.log('Yaya');
+          i = 0;
+          temp = [];
+          return;
+        }
+        i++;
+      } else {
+        temp = [];
+        i = 0;
+      }
+    }
+    window.addEventListener('keyup', checkCode);
+  </script>
+</body>
+
+</html>
